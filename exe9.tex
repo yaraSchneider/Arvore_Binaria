@@ -1,0 +1,27 @@
+Exercício 9 — Percurso em ordem
+
+Árvore:
+
+        50
+       /  \
+     30    70
+    / \    / \
+  20  40  60  80
+
+  Ordem de impressão
+
+20 30 40 50 60 70 80
+
+Função em ordem
+
+void emOrdem(No *raiz) {
+
+    if (raiz != NULL) {
+
+        emOrdem(raiz->esquerda);
+
+        printf("%d ", raiz->valor);
+
+        emOrdem(raiz->direita);
+    }
+}
